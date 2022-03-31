@@ -1,0 +1,51 @@
+@import "../../Assets/scss/mixin.scss";
+
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__list{
+        display: flex;
+        align-items: center;
+    }
+
+    &__item~&__item{
+        margin-left: 16px;
+    }
+
+    .activePage{
+        a{
+            color: #FFBA9D;
+        }
+    }
+
+    a{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: #474747;
+    }
+
+    button{
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 5px;
+        border: 1px solid #474747;
+        border-radius: 3px;
+        cursor: pointer;
+
+        i{
+            font-size: 18px;
+        }
+    }
+}
+
+@include breakpoint-down(568px){
+    .pagination{
+        width: 100%;
+    }
+}

@@ -1,0 +1,139 @@
+@import '../../Assets/scss/mixin.scss';
+@import '../../Assets/scss/varebles.scss';
+//  header style
+.header{
+    padding: 26px 0;
+    margin-bottom: 80px;
+
+    &__block{
+        @include flex(center, space-between);
+    }
+
+    // ==== header__nav styles =====
+    &__nav {
+        transition: .5s all ease;
+
+        &-list{
+            @include flex(center, space-between);
+            width: 441px;
+        }
+
+        &-item {
+            padding-bottom: 10px;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+            text-transform: uppercase;
+            color: #9A9A9A;
+        }
+
+        .active{
+            color: #3D3D3D;
+            border-bottom: 2px solid #777777;
+        }
+    }
+
+    // ==== header__form styles ====
+    &__form {
+        position: relative;
+        width: 256px;
+        height: 40px;
+        background: #F4F4F4;
+        border-radius: 3px;
+
+        &-input{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: none;
+            z-index: 1;
+            outline: none;
+            padding: 12px 14px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: #474747;
+        }
+
+        &-icon{
+            position: absolute;
+            z-index: 2;
+            background: #FFBA9D;
+            border-radius: 3px;
+            @include flex(center, center);
+            right: 0;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+    }
+
+    // humburger
+    &__humburger{
+        width: 32px;
+        height: 32px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 32px;    
+        display: none;
+        transition: .5s all ease;
+    }
+}
+
+// responsive style
+@include breakpoint-down(568px){
+    .header{
+        padding: 10px 10px;
+
+        &__block{
+            flex-wrap: wrap;
+        }
+
+        &__logo{
+            width: 120px;
+            height: 33px;
+        }
+
+        &__nav{
+            position: absolute;
+            top: 50px;
+            z-index: 999;
+            background: #e5e5e5;
+            margin-top: 20px;
+            height: 100vh;
+            width: 100%;
+            transform: translateX(-100%);
+
+            &-list{
+                flex-direction: column;
+                width: 100%;
+            }   
+
+            &-item {
+                margin-bottom: 55px;
+                font-size: 20px;
+                line-height: 26px;
+            }
+        }
+
+        &__nav.nav{
+            transform: translateX(0);
+        }
+
+        &__humburger{
+            display: block;
+        }
+
+        &__form {
+            margin-top: 33px;
+            width: 100%;
+            height: 44px;
+
+            &-icon{
+                height: 44px;
+            }           
+        }
+    }
+}

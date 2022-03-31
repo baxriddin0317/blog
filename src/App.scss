@@ -1,0 +1,30 @@
+// font style https://fonts.google.com/specimen/Roboto+Mono?query=Roboto+mo
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;700&family=Kumbh+Sans:wght@400;500;600&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700&family=Oswald:wght@400;500&family=Poppins:wght@300;400;700&family=Roboto+Mono:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;700&display=swap');
+
+@import './Assets/scss/varebles.scss';
+@import './Assets/scss/mixin.scss';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: $body-bg;
+  font-family: 'Roboto Mono';
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.container{
+  max-width: 1300px;
+  padding: 0 10px;
+  margin: 0 auto;
+}

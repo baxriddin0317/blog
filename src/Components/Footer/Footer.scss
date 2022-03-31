@@ -1,0 +1,95 @@
+@import "../../Assets/scss/mixin.scss";
+
+.footer{
+    background-color: #000;
+    height: 306px;
+    padding-top: 40px;
+    margin-top: 50px;
+
+    &__content{
+        display: flex;
+    }
+
+    &__left{
+        position: relative;
+
+        &-bg {
+            position: absolute;
+            top: -40px;
+            height: 306px;
+            left: -260px;
+            z-index: 1;
+        }
+    }
+
+    &__right {
+        margin-left: auto;
+        color: #fff;
+        display: flex;
+        margin-right: 50px;
+        position: relative;
+        z-index: 3;
+    }
+
+    &__list ~ &__list {
+        margin-left: 100px;
+    }
+
+    &__item {
+        margin-bottom: 15px;
+
+        &-title{
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 27px;
+            margin-bottom: 15px;
+        }
+
+        a{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            color: #FFFFFF;
+
+            &:hover{
+                border-bottom: 2px solid #fff;
+            }
+        }
+    }
+}   
+
+@include breakpoint-down(568px){
+    .footer{
+        height: 100%;
+        width: 100%;
+        padding: 31px 20px;
+
+        &__left{
+            width: 100%;
+            &-bg{
+                width: 100%;
+                top: 80px;
+                left: -50px;
+            }
+        }
+
+        &__content{
+            flex-direction: column;
+        }
+
+        &__right{
+            flex-direction: column;
+            margin: 0;
+            margin-top: 50px;
+        }
+
+        &__list{
+            margin-bottom: 40px;
+        }
+
+        &__list ~ &__list{
+            margin-left: 0;
+        }
+
+    }
+}

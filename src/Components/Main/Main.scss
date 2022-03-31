@@ -1,0 +1,97 @@
+@import "../../Assets/scss/mixin.scss";
+@import "../../Assets/scss/varebles.scss";
+
+.main{
+    &__block {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__box{
+        width: 320px;
+        margin-right: 80px;
+
+        &-title{
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: #474747;
+            margin-bottom: 36px;
+        }
+
+        &-text {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+            color: #474747;
+            margin-bottom: 25px;
+        }
+
+        &-more {
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #474747;
+            cursor: pointer;
+            margin-bottom: 50px;
+
+            span{
+                margin-left: 10px;
+                background: #F4F4F4;
+                border-radius: 3px;
+                width: 20px;
+                height: 20px;
+                @include flex(center, center);
+            }
+        }
+
+        &-links{
+            display: flex;
+            align-items: center;
+
+            a{
+                color: #474747;  
+                font-size: 20px;              
+            }
+
+            a~a{
+                margin-left: 24px;
+            }
+
+        }
+    }
+
+    &__right{
+        margin-bottom: 50px;
+
+        &-title {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: #474747;
+            margin-bottom: 58px;
+        }
+    }
+}
+
+// responsive style
+@include breakpoint-down(568px){
+    .main{
+        padding: 0 20px;
+
+        &__block {
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+
+        &__right{
+            width: 100%; 
+        }
+
+        &__box{
+            width: 100%;
+        }
+    }
+}

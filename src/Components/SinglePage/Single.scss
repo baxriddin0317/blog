@@ -1,0 +1,80 @@
+@import "../../Assets/scss/mixin.scss";
+
+.single{
+    margin-bottom: 30px;
+    width: 734px;
+    margin: 0 auto;
+
+    &__block{
+        margin-bottom: 80px;
+
+        div{
+            display: flex;
+        }
+
+        span{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #777777;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            i{
+                display: inline-block;
+                font-size: 16px;
+                margin: 0 10px;
+            }
+        }
+
+        &-title{
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            color: #474747;
+            margin: 24px 0;
+            padding-right: 20px;
+        }
+
+        img{
+            margin: 45px 0;
+        }
+    }
+
+    &__text{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: #474747;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 28px;
+        color: #474747;
+        margin: 25px 0;
+    }
+}
+
+@include breakpoint-down(568px){
+    .single{
+        width: 100%;
+        padding: 0 20px;
+
+        &__block {
+            width: 100%;
+            margin: 0 auto;
+
+            img{
+                width: 100%;
+            }
+
+            &-title{
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }       
+    }
+}

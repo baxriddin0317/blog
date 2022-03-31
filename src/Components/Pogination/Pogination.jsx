@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import "./Pogination.scss";
 
 function Pogination({postsPerPage, totalPosts, paginate, currentPage}) {
@@ -23,9 +24,9 @@ function Pogination({postsPerPage, totalPosts, paginate, currentPage}) {
             {
                 pageNumber.map(num => (
                     <li key={num} className={currentPage === num ? 'pagination__item activePage' : 'pagination__item'}>
-                        <a onClick={() => paginate(num)} href="#">
+                        <Link onClick={() => paginate(num)} to={"#"}>
                             {num}
-                        </a>
+                        </Link>
                     </li>
                 ))
             }

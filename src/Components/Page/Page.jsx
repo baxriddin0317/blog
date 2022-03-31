@@ -1,5 +1,4 @@
 import React from 'react'
-import Skeleton from 'react-loading-skeleton'
 import Item from '../Item/Item'
 
 function Page({data, loading}) {
